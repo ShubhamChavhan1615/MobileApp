@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- header section -->
+    <header class="nav-items">
+        <div class="logo">
+            <h1>S</h1>
+        </div>
+        <div class="nav-bar">
+            <nav>
+                <ul class="list-items">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#product">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#blog">Posts</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-icon" style="display: flex; align-items: center; gap: 15px;">
+            <i class="fa-solid fa-user nav-icon"></i>
+            <h4>
+                <%= username %>
+            </h4>
+            <!-- <i class="fa-regular fa-heart nav-icon heart"></i>
+            <i class="fa-solid fa-cart-shopping nav-icon"></i> -->
+        </div>
+        <!-- <div class="search">
+            <input type="text" placeholder="Search here" class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div> -->
+        <div class="responsive-btn">
+            <i class="fa-solid fa-bars" id="bar"></i>
+            <i class="fa-solid fa-xmark" id="close"></i>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="main-content">
+            <!-- <marquee behavior="" direction=""> -->
+            <div class="main-desc">
+                <h4>order your dream phone</h4>
+                <h1>PHONE MADE FOR YOU</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, qui.</p>
+                <button>Exploer More</button>
+            </div>
+            <div class="main-img">
+                <img src="images/mobile3r.png" alt="">
+            </div>
+            <!-- </marquee> -->
+        </section>
+    </main>
+
+    <!-- product section -->
+    <center>
+        <h1>Top offers Order Now</h1>
+    </center>
+    <section class="products-row">
+        <div class="top-offer">
+
+            <div class="product1">
+                <div class="p1-img">
+                    <img src="images/headp1r.png" alt="">
+                </div>
+                <div class="p1-desc">
+                    <h3>Best HeadPhone big discount</h3>
+                    <h1>Sony Top brand</h1>
+                    <h2><del>₹3999</del> ₹3200</h2>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+            <div class="product2">
+                <div class="p2-img">
+                    <img src="images/mobile3r.png" alt="">
+                </div>
+                <div class="p2-desc">
+                    <h3>Best Phone big discount</h3>
+                    <h1>I phone 14</h1>
+                    <h2><del>₹59999</del> ₹49999</h2>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <center>
+        <h1 id="product">Products</h1>
+    </center>
+    <div class="types-of-product" style="margin: 20px 0px;">
+        <button class="inline" onclick="all_product()">All products</button>
+        <button class="inline" onclick="trending_product()">Trending product</button>
+        <button class="inline" onclick="special_product()">Special product</button>
+    </div>
+    <section class="product-list" id="all-products">
+        <div class="all-products">
+            <div class="all-p1">
+                <div class="all-p1-img">
+                    <img src="images/mobile4r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p1-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p2">
+                <div class="all-p2-img p2">
+                    <img src="images/mobile1r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p2-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p3">
+                <div class="all-p3-img">
+                    <img src="images/mobile2r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p3-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p4">
+                <div class="all-p4-img">
+                    <img src="images/mobile6r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p4-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="all-products" id="all-p">
+            <div class="all-p1">
+                <div class="all-p1-img">
+                    <img src="images/mobile2r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p1-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p2">
+                <div class="all-p2-img">
+                    <img src="images/mobile2r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p2-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p3">
+                <div class="all-p3-img p3">
+                    <img src="images/headp2r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p3-desc">
+                    <h3>Head Phone</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p4">
+                <div class="all-p4-img">
+                    <img src="images/mobile6r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p4-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="all-products" id="all-p">
+            <div class="all-p1">
+                <div class="all-p1-img">
+                    <img src="images/headp1r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p1-desc">
+                    <h3>Head Phone</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p2">
+                <div class="all-p2-img">
+                    <img src="images/mobile2r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p2-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p3">
+                <div class="all-p3-img p3">
+                    <img src="images/mobile6r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p3-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p4">
+                <div class="all-p4-img">
+                    <img src="images/headp3r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p4-desc">
+                    <h3>head Phone</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-list" id="trending-products">
+        <!-- <p>trending-products</p> -->
+        <div class="all-products">
+            <div class="all-p1">
+                <div class="all-p1-img">
+                    <img src="images/headp1r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p1-desc">
+                    <h3>Sony a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p2">
+                <div class="all-p2-img p2">
+                    <img src="images/mobile1r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p2-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p3">
+                <div class="all-p3-img">
+                    <img src="images/mobile2r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p3-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p4">
+                <div class="all-p4-img">
+                    <img src="images/headp2r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p4-desc">
+                    <h3>Head Phone a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="all-products" id="all-p">
+            <div class="all-p1">
+                <div class="all-p1-img">
+                    <img src="images/mobile2r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p1-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p2">
+                <div class="all-p2-img">
+                    <img src="images/mobile2r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p2-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p3">
+                <div class="all-p3-img p3">
+                    <img src="images/mobile6r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p3-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p4">
+                <div class="all-p4-img">
+                    <img src="images/mobile6r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p4-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-list3" id="special-products">
+        <!-- <p>trending-products</p> -->
+        <div class="all-products">
+            <div class="all-p1">
+                <div class="all-p1-img">
+                    <img src="images/headp3r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p1-desc">
+                    <h3>Head Phone a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p2">
+                <div class="all-p2-img p2">
+                    <img src="images/mobile2r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p2-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p3">
+                <div class="all-p3-img">
+                    <img src="images/mobile4r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p3-desc">
+                    <h3>Redmi a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="all-p4">
+                <div class="all-p4-img">
+                    <img src="images/headp2r.png" alt="">
+                    <i class="fa-regular fa-heart nav-icon heart"></i>
+                </div>
+                <div class="all-p4-desc">
+                    <h3>Head Phone a12</h3>
+                    <h4>₹11999</h4>
+                    <button class="a-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- phone responsive section -->
+    <section class="type-p">
+        <div class="t-p1">
+            <button class="tp-btn" onclick="all_product_phone()">All Products</button>
+        </div>
+        <div class="t-p2">
+            <button class="tp-btn" onclick="trending_product_phone()">Trending Products</button>
+        </div>
+        <div class="t-p3">
+            <button class="tp-btn" onclick="special_product_phone()">Special Products</button>
+        </div>
+    </section>
+
+    <section class="for-phone" id="all-products-fp">
+        <div class="product1-p">
+            <div class="p1-p-img">
+                <img src="images/mobile1r.png" alt="">
+            </div>
+            <div class="p1-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product2-p">
+            <div class="p2-p-img">
+                <img src="images/mobile2r.png" alt="" height="200px">
+            </div>
+            <div class="p2-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹21999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product3-p">
+            <div class="p3-p-img">
+                <img src="images/mobile4r.png" alt="" height="200px">
+            </div>
+            <div class="p3-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product4-p">
+            <div class="p4-p-img">
+                <img src="images/mobile5r.png" alt="" height="200px">
+            </div>
+            <div class="p4-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product1-p">
+            <div class="p1-p-img">
+                <img src="images/headp1r.png" alt="" height="200px">
+            </div>
+            <div class="p1-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product2-p">
+            <div class="p2-p-img">
+                <img src="images/mobile2r.png" alt="" height="200px">
+            </div>
+            <div class="p2-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹21999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product3-p">
+            <div class="p3-p-img">
+                <img src="images/headp2r.png" alt="" height="200px">
+            </div>
+            <div class="p3-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product4-p">
+            <div class="p4-p-img">
+                <img src="images/headp3r.png" alt="" height="200px">
+            </div>
+            <div class="p4-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product1-p">
+            <div class="p1-p-img">
+                <img src="images/headp1r.png" alt="" height="200px">
+            </div>
+            <div class="p1-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product2-p">
+            <div class="p2-p-img">
+                <img src="images/mobile2r.png" alt="" height="200px">
+            </div>
+            <div class="p2-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹21999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product3-p">
+            <div class="p3-p-img">
+                <img src="images/headp2r.png" alt="" height="200px">
+            </div>
+            <div class="p3-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product4-p">
+            <div class="p4-p-img">
+                <img src="images/headp3r.png" alt="" height="200px">
+            </div>
+            <div class="p4-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="for-phone" id="trending-products-fp">
+        <div class="product1-p">
+            <div class="p1-p-img">
+                <img src="images/headp1r.png" alt="">
+            </div>
+            <div class="p1-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product2-p">
+            <div class="p2-p-img">
+                <img src="images/mobile2r.png" alt="" height="200px">
+            </div>
+            <div class="p2-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹21999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product3-p">
+            <div class="p3-p-img">
+                <img src="images/mobile4r.png" alt="" height="200px">
+            </div>
+            <div class="p3-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product4-p">
+            <div class="p4-p-img">
+                <img src="images/mobile5r.png" alt="" height="200px">
+            </div>
+            <div class="p4-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product1-p">
+            <div class="p1-p-img">
+                <img src="images/headp1r.png" alt="" height="200px">
+            </div>
+            <div class="p1-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product2-p">
+            <div class="p2-p-img">
+                <img src="images/mobile2r.png" alt="" height="200px">
+            </div>
+            <div class="p2-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹21999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product3-p">
+            <div class="p3-p-img">
+                <img src="images/headp2r.png" alt="" height="200px">
+            </div>
+            <div class="p3-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product4-p">
+            <div class="p4-p-img">
+                <img src="images/headp3r.png" alt="" height="200px">
+            </div>
+            <div class="p4-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="for-phone" id="special-products-fp">
+        <div class="product1-p">
+            <div class="p1-p-img">
+                <img src="images/mobile6r.png" alt="" height="200px">
+            </div>
+            <div class="p1-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product2-p">
+            <div class="p2-p-img">
+                <img src="images/mobile2r.png" alt="" height="200px">
+            </div>
+            <div class="p2-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹21999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product3-p">
+            <div class="p3-p-img">
+                <img src="images/mobile4r.png" alt="" height="200px">
+            </div>
+            <div class="p3-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product4-p">
+            <div class="p4-p-img">
+                <img src="images/mobile5r.png" alt="" height="200px">
+            </div>
+            <div class="p4-p-desc">
+                <h3>Phone a12</h3>
+                <h4>₹11999</h4>
+                <button class="a-btn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+    <!-- end product section -->
+
+    <!-- services section --> <br><br><br>
+    <h1 id="services">Services</h1>
+    <section class="services-row">
+        <!-- <i class="fa-solid fa-truck-fast"></i>
+        <i class="fa-regular fa-credit-card"></i>
+        <i class="fa-solid fa-headphones"></i>
+        <i class="fa-solid fa-truck"></i> -->
+        <div class="first-service">
+            <div class="service-icon">
+                <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div class="service-desc">
+                Free Shipping for you
+            </div>
+        </div>
+        <div class="second-service">
+            <div class="service-icon">
+                <i class="fa-regular fa-credit-card"></i>
+            </div>
+            <div class="service-desc">
+                Many payment getway
+            </div>
+        </div>
+        <div class="third-service">
+            <div class="service-icon">
+                <i class="fa-solid fa-headphones"></i>
+            </div>
+            <div class="service-desc">
+                24X7 Online support
+            </div>
+        </div>
+        <div class="fourth-service">
+            <div class="service-icon">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+            <div class="service-desc">
+                Free Dilevery on you want
+            </div>
+        </div>
+    </section>
+
+    <!-- end services  -->
+    <!-- <i class="fas fa-clock"></i>
+    <i class="fas fa-comment"></i> -->
+    <!-- posts section -->
+    <center>
+        <h1 id="blog">Posts</h1>
+    </center> <br><br>
+    <section class="posts-section">
+        <div class="post1 post-h">
+            <div class="post1-img">
+                <img src="images/customer0.jfif" alt="">
+            </div>
+            <div class="post1-desc">
+                <h3>Best camera quality</h3>
+                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, error. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Laborum, odio?</p>
+                <br> <i class="fas fa-clock p-icon"></i> 21:30
+                <i class="fas fa-comment p-icon"></i> 123K
+            </div>
+        </div>
+        <div class="post2 post-h">
+            <div class="post2-img">
+                <img src="images/customer2.jfif" alt="">
+            </div>
+            <div class="post2-desc">
+                <h3>Best perfomance</h3>
+                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, error. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Laborum, odio?</p>
+                <br> <i class="fas fa-clock p-icon"></i> 01:30
+                <i class="fas fa-comment p-icon"></i> 223K
+            </div>
+        </div>
+        <div class="post3 post-h">
+            <div class="post3-img">
+                <img src="images/kiran.jpg" alt="">
+            </div>
+            <div class="post3-desc">
+                <h3>Best Feedback ever</h3>
+                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, error. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Laborum, odio?</p>
+                <br> <i class="fas fa-clock p-icon"></i> 11:30
+                <i class="fas fa-comment p-icon"></i> 23K
+            </div>
+        </div>
+    </section>
+    <!-- end of posts section -->
+
+    <!-- gallery --> <br>
+    <center>
+        <h1 id="gallery">Gallery</h1>
+    </center>
+    <br>
+    <section class="gallery">
+        <div class="slider-container">
+            <div class="slides">
+                <img src="images/gallery.jfif" alt="">
+                <img src="images/gallery1.jfif" alt="">
+                <img src="images/gallery2.jfif" alt="">
+                <img src="images/gallery3.jfif" alt="">
+            </div>
+            <div class="prev-button">
+                <i class="fa fa-chevron-left"></i>
+            </div>
+            <div class="next-button">
+                <i class="fa fa-chevron-right"></i>
+            </div>
+        </div>
+    </section> <br><br>
+    <!-- end gallery -->
+    <!-- contact us  -->
+    <center><br>
+        <h1 id="contact">Contact Us</h1>
+    </center> <br><br>
+    <section class="contact-row">
+        <div class="contact-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60186.992365241815!2d75.14711992941547!3d19.469056270915367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb6f0f41184b19%3A0xcce51232d427d9c7!2sBhavinimgaon%2C%20Maharashtra%20414502!5e0!3m2!1sen!2sin!4v1698479743670!5m2!1sen!2sin"
+                width="500" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="map-r"></iframe>
+        </div>
+        <div class="contact-form">
+            <form action="" method="post">
+                <label for="">Send Message</label><br><br>
+                <label for="name">Name :</label><br><br>
+                <input type="text" placeholder="First" name="name" id="name">
+                <input type="text" placeholder="Last" name="name"> <br><br>
+                <label for="email">Email :</label><br><br>
+                <input type="text" name="email" id="email" placeholder="Email">
+                <br><br> <label for="message" id="l-c">Message : </label>
+                <br><br><textarea name="message" id="message" cols="50" rows="5"></textarea> <br>
+                <br> <button id="c-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <!-- end contact -->
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="f-logo-desc">
+            <h1>S</h1>
+            <br><br>
+            <h3>Best selling in phone on <br>
+                your support</h3><br><br>
+            <pre>Lorem ipsum dolor sit amet.</pre>
+        </div>
+        <div class="important-links">
+            <p>Important Links</p>
+            <br> <a href="#">Home</a><br>
+            <a href="#product">Products</a><br>
+            <a href="#services">Services</a><br>
+            <a href="#blog">Posts</a><br>
+            <a href="#gallery">Gallery</a><br>
+            <a href="#contact">Contact</a><br>
+        </div>
+        <div class="social-media">
+            <p>Follow On</p> <br><br><br>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i><br><br>
+            <i class="fa-solid fa-phone small"></i> 91+ 9359720973
+        </div>
+    </footer>
+    <div class="copy-right">
+        <p>&copy; All right reserved || Shubham Chavhan</p>
+    </div>
+    <!-- end footer -->
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

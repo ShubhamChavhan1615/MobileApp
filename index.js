@@ -9,7 +9,7 @@ import indexRouter from "./routes/index.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 const hostname = "localhost";
 const app = express();
 

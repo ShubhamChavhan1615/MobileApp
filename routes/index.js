@@ -1,21 +1,36 @@
 import express from "express";
-import AppUser from "../model/model.js"; // Make sure to correct the path
+import AppUser from "../model/model.js"; 
 const router = express.Router();
+
+const authenticateUser = async (req, res, next) => {
+    try {
+        const { email, password } = req.body;
+        const user = await AppUser.findOne({ email: email });
+        if (!user || user.password !== password) {
+            res.status(401).send("Invalid email or password");
+        } else {
+            
+            req.user = user;
+            next();
+        }
+    } catch (error) {
+        console.error("Error authenticating user:", error);
+        res.status(500).send("Internal Server Error");
+    }
+};
 
 router.get("/", (req, res) => {
     res.render("register"); 
 });
 
-router.get("/singin", (req, res) => {
-    res.render("singin"); 
+router.get("/signin", (req, res) => {
+    res.render("signin"); 
 });
 
-router.post("/singin/home", (req, res)=>{
-    let password = req.body.password;
-    if(this.email == password) {
-        res.render("home")
-    }
-})
+router.post("/signin/home", authenticateUser, (req, res) => {
+    // If execution reaches here, authentication was successful
+    res.render("home", { username: req.user.username });
+});
 
 router.post("/home", async (req, res) => {
     try {
@@ -28,14 +43,16 @@ router.post("/home", async (req, res) => {
                 password: password,
             });
             const savedUser = await newUser.save();
-            res.render("home", {username: username}); // Assuming you have a "home" view
+            res.render("home", { username: username }); 
         } else {
             res.send("Passwords do not match");
         }
     } catch (error) {
         console.error("Error saving user:", error);
-        res.status(400).send(error.message); // Sending only the error message
+        res.status(400).send(error.message); 
     }
 });
+
+
 
 export default router;

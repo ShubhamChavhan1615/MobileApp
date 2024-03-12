@@ -21,6 +21,26 @@ const RegisterData = new mongoose.Schema({
     },
 })
 
-const RegisterDatas = mongoose.model("RegisterUser", RegisterData)
+const ContactUsData = new mongoose.Schema({
+    fname : {
+        type: String,
+        required: true
+    },
+    lname :{
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    message:{
+        type: String,
+        required: true
+    }
+})
 
-export default RegisterDatas;
+ const RegisterDatas = mongoose.model("RegisterUser", RegisterData);
+ const ContactUsDatas = mongoose.model("ContactUsData", ContactUsData);
+
+export default  RegisterDatas

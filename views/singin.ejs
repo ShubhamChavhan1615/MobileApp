@@ -3,65 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register page</title>
+    <title>Sign in page</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        .d1{
+        .d1 {
             height: 100vh;
             width: 100%;
-            background-color: wheat;
             display: flex;
             justify-content: center;
             align-items: center;
             float: left;
         }
-        .d2{
-            height: 450px;
+        .d2 {
             width: 400px;
-            background-color: aqua;
-            box-sizing: border-box;
-            border: 2px solid black;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            padding: 8px 30px;
+            padding: 20px;
         }
-        .inp{
+        .inp {
             height: 35px;
-            padding: 3px 7px;
+            padding: 5px;
             border-radius: 10px;
-            width: 300px;
+            width: 100%;
+            margin-bottom: 10px;
         }
-        #btn1{
-            height: 30px;
-            width: 90px;
-            border: 0;
-            color: aliceblue;
-            background-color: red;
+        #btn1, #btn2 {
+            height: 40px;
+            width: 100px;
+            border: none;
+            color: white;
             border-radius: 7px;
+            cursor: pointer;
         }
-        #btn2{
-            height: 30px;
-            width: 90px;
-            border: 0;
-            color: aliceblue;
+        #btn1 {
+            background-color: red;
+        }
+        #btn2 {
             background-color: green;
             margin-left: 20px;
-            border-radius: 7px;
         }
-        #btn1:hover{
+        #btn1:hover {
             background-color: darkred;
         }
-        #btn2:hover{
+        #btn2:hover {
             background-color: darkgreen;
         }
-        .a:hover{
+        .a:hover {
             font-size: large;
             color: black;
         }
-        #r{
-            color: aliceblue;
+        #r {
+            color: blue;
             text-decoration: none;
         }
     </style>
@@ -69,15 +65,12 @@
 <body>
     <div class="d1">
         <div class="d2">
-            <form action="/singin/home" method="post">
-                <center><h3>Sing in Now</h3></center><br>
-                <!-- <input type="text" name="username" id="username" placeholder="Your Name" class="inp"><br><br> -->
-                <input type="email" name="email" id="" placeholder="Your email" class="inp"><br><br>
-                <!-- <input type="number" name="phone" id="" placeholder="Phone Number"  class="inp"><br> <br> -->
-                <input type="password" name="password" id="" placeholder="Password" class="inp"><br> <br>
-                <!-- <input type="password" name="cpassword" id="" placeholder="Password again" class="inp"><br><br> -->
+            <form action="/signin/home" method="post">
+                <center><h3>Sign in Now</h3></center><br>
+                <input type="email" name="email" id="" placeholder="Your email" class="inp"><br>
+                <input type="password" name="password" id="" placeholder="Password" class="inp"><br>
                 <button type="reset" id="btn1">Clear</button> 
-                <button type="submit" id="btn2">Sing In</button><br><br>
+                <button type="submit" id="btn2">Sign In</button><br><br>
             </form>
         </div>
     </div>

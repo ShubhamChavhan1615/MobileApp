@@ -9,7 +9,9 @@ import indexRouter from "./routes/index.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const port = process.env.PORT || 4000;
+import 'dotenv/config'
+
+const port = 4000;
 const hostname = "localhost";
 const app = express();
 
@@ -23,6 +25,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/", indexRouter);
 
-app.listen(port, hostname, () => {
-    console.log(`Server started at http://${hostname}:${port}`);
+app.listen(process.env.PORT, hostname, () => {
+    console.log(`Server started at http://${hostname}:${process.env.PORT}`);
 });

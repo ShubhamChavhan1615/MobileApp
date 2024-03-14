@@ -1,11 +1,8 @@
 import mongoose from "mongoose";
-
+import 'dotenv/config'
 mongoose.set('strictQuery', false);
 
-const db = mongoose.connect("mongodb+srv://shubham1615:shubham123@mobileapp.tkbshm4.mongodb.net/?retryWrites=true&w=majority&appName=MobileApp",{
-    // useUnifiedTopology: true,
-    // useCreateIndex: true,
-})
+const db = mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
     console.log("connected")
 })
